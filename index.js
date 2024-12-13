@@ -40,7 +40,7 @@ app.post('/conference', async (req, res) => {
   res.send(`<?xml version="1.0" encoding="UTF-8"?>
 <Response>
   <Dial>
-    <Conference statusCallback="https://lucasmbp.ngrok.io/status" statusCallbackEvent="join leave">
+    <Conference statusCallback="https://${process.env.APP_DOMAIN}/status" statusCallbackEvent="join leave">
     Room 1234</Conference>
   </Dial>
 </Response>`);
